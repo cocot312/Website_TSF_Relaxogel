@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaxogel - Solusi Cepat Nyeri Otot & Sendi</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #0d6efd; /* Medical Blue */
+            --primary-dark: #0a58ca;
+            --mint-green: #20c997; /* Mint/Teal */
+            --mint-light: #e8f9f4;
+            --light-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Typography & Utility */
+        .text-mint { color: var(--mint-green); }
+        .bg-mint { background-color: var(--mint-green); }
+        .bg-mint-light { background-color: var(--mint-light); }
+        
+        .btn-mint {
+            background-color: var(--mint-green);
+            color: white;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        .btn-mint:hover {
+            background-color: #1ba87e;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(32, 201, 151, 0.3);
+        }
+
+        /* Navbar */
+        .navbar {
+            transition: all 0.3s ease;
+            padding: 15px 0;
+        }
+        .navbar.scrolled {
+            padding: 10px 0;
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+        }
+        .nav-link {
+            font-weight: 500;
+            color: #495057;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-blue);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #e0ebff 0%, #ffffff 100%);
+            padding: 160px 0 100px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-title {
+            font-weight: 800;
+            line-height: 1.2;
+            color: var(--primary-dark);
+        }
+
+        /* Cards & Features */
+        .feature-card {
+            border: none;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(13, 110, 253, 0.1);
+        }
+        .icon-box {
+            width: 70px;
+            height: 70px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Step-by-step */
+        .step-card {
+            background: var(--mint-light);
+            border-radius: 16px;
+            padding: 30px;
+            height: 100%;
+            position: relative;
+            z-index: 1;
+        }
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-blue);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+        }
+
+        /* Testimonials */
+        .testimonial-card {
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 16px;
+            background: white;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--primary-dark);
+            color: rgba(255,255,255,0.8);
+        }
+        .footer a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer a:hover {
+            color: var(--mint-green);
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbarNav">
+
+    <nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#beranda">
+                <i class="bi bi-activity text-primary fs-3 me-2"></i>
+                <span class="fw-bold fs-4 text-primary">Relaxo<span class="text-mint">gel</span></span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#beranda">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tentang">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#keunggulan">Keunggulan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cara-pakai">Cara Pakai</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimoni">Testimoni</a>
+                    </li>
+                </ul>
+                <div class="d-flex ms-lg-3 mt-3 mt-lg-0">
+                    <a href="#beli" class="btn btn-mint rounded-pill px-4 fw-semibold">Beli Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="beranda" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center flex-column-reverse flex-lg-row">
+                <div class="col-lg-6 text-center text-lg-start mt-5 mt-lg-0">
+                    <span class="badge bg-mint-light text-mint px-3 py-2 rounded-pill mb-3 fw-semibold fs-6">Formula Baru! Ibuprofen Gel</span>
+                    <h1 class="hero-title display-4 mb-4">Bebas Nyeri,<br>Bebas Bergerak.</h1>
+                    <p class="lead mb-5 text-secondary">
+                        Tuntaskan nyeri otot dan sendi seketika dengan <strong>Relaxogel</strong>. Inovasi gel ibuprofen yang langsung meresap ke pusat nyeri, memberikan efek dingin yang menenangkan tanpa rasa lengket.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3">
+                        <a href="#beli" class="btn btn-primary btn-lg rounded-pill px-5 shadow-sm fw-semibold">Beli Sekarang</a>
+                        <a href="#tentang" class="btn btn-outline-primary btn-lg rounded-pill px-4 fw-semibold">Pelajari Lebih Lanjut</a>
+                    </div>
+                    
+                    <div class="mt-5 d-flex align-items-center justify-content-center justify-content-lg-start gap-4">
+                        <div class="d-flex align-items-center text-secondary">
+                            <i class="bi bi-shield-check text-success fs-4 me-2"></i> BPOM Approved
+                        </div>
+                        <div class="d-flex align-items-center text-secondary">
+                            <i class="bi bi-patch-check text-primary fs-4 me-2"></i> Teruji Klinis
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="position-relative text-center">
+                        <!-- Placeholder for Product Image -->
+                        <img src="https://placehold.co/600x600/e8f9f4/0a58ca?text=Tube+Relaxogel\n(Ibuprofen+Gel)" alt="Relaxogel Product" class="img-fluid rounded-circle shadow-lg" style="max-width: 85%;">
+                        
+                        <!-- Floating Badge -->
+                        <div class="position-absolute top-50 start-0 translate-middle-y bg-white p-3 rounded-4 shadow-sm border border-light d-none d-md-block" style="transform: translateX(-20%);">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bg-primary bg-opacity-10 p-2 rounded-circle">
+                                    <i class="bi bi-lightning-charge-fill text-primary fs-3"></i>
+                                </div>
+                                <div class="text-start">
+                                    <h6 class="mb-0 fw-bold">Reaksi Cepat</h6>
+                                    <small class="text-muted">Meresap < 5 Menit</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tentang" class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <img src="https://placehold.co/500x600/0d6efd/ffffff?text=Ilustrasi+Otot/Sendi" alt="Ilustrasi Nyeri Otot" class="img-fluid rounded-4 shadow">
+                </div>
+                <div class="col-lg-6 offset-lg-1">
+                    <h6 class="text-mint fw-bold text-uppercase mb-2">Tentang Produk</h6>
+                    <h2 class="fw-bold mb-4">Apa itu Relaxogel?</h2>
+                    <p class="text-secondary mb-4">
+                        Relaxogel adalah obat anti-inflamasi non-steroid (OAINS) topikal dengan bahan aktif <strong>Ibuprofen 5%</strong>. Berbeda dengan obat minum, Relaxogel diaplikasikan langsung ke area yang sakit.
+                    </p>
+                    <p class="text-secondary mb-5">
+                        Teknologi <em>Deep-Penetration Gel</em> memungkinkan molekul ibuprofen menembus lapisan kulit dengan cepat untuk meredakan peradangan dan nyeri tepat pada sumbernya, meminimalisir risiko efek samping pada lambung.
+                    </p>
+                    
+                    <div class="d-flex flex-column gap-3">
+                        <div class="d-flex align-items-start">
+                            <i class="bi bi-check-circle-fill text-mint fs-5 me-3 mt-1"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">Meredakan Nyeri Otot</h6>
+                                <p class="text-muted small">Sangat efektif untuk keseleo, kram, dan pegal linu setelah beraktivitas.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start">
+                            <i class="bi bi-check-circle-fill text-mint fs-5 me-3 mt-1"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">Mengatasi Nyeri Sendi</h6>
+                                <p class="text-muted small">Membantu mengurangi nyeri akibat peradangan sendi ringan (osteoarthritis).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="keunggulan" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-mint fw-bold text-uppercase mb-2">Keunggulan Utama</h6>
+                <h2 class="fw-bold">Mengapa Memilih Relaxogel?</h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card p-4 text-center h-100 shadow-sm">
+                        <div class="icon-box bg-primary bg-opacity-10 text-primary mx-auto">
+                            <i class="bi bi-droplet"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Tidak Lengket</h5>
+                        <p class="text-muted small mb-0">Formula water-based membuat gel sangat cepat menyerap dan tidak meninggalkan noda pada pakaian Anda.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card p-4 text-center h-100 shadow-sm">
+                        <div class="icon-box bg-info bg-opacity-60 text-light mx-auto">
+                            <i class="bi bi-snow"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Efek Dingin</h5>
+                        <p class="text-muted small mb-0">Kandungan menthol memberikan sensasi dingin seketika yang mengalihkan rasa sakit sebelum ibuprofen bekerja.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card p-4 text-center h-100 shadow-sm">
+                        <div class="icon-box bg-danger bg-opacity-10 text-danger mx-auto">
+                            <i class="bi bi-bullseye"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Tepat Sasaran</h5>
+                        <p class="text-muted small mb-0">Langsung bekerja pada otot atau sendi yang meradang, mempercepat proses penyembuhan secara lokal.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card p-4 text-center h-100 shadow-sm">
+                        <div class="icon-box bg-success bg-opacity-10 text-success mx-auto">
+                            <i class="bi bi-shield-plus"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Aman di Lambung</h5>
+                        <p class="text-muted small mb-0">Karena dioleskan pada kulit (topikal), obat tidak masuk ke saluran cerna sehingga sangat aman bagi penderita maag.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cara-pakai" class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-4 mb-5 mb-lg-0 text-center text-lg-start">
+                    <h6 class="text-mint fw-bold text-uppercase mb-2">Panduan Penggunaan</h6>
+                    <h2 class="fw-bold mb-4">Cara Pakai yang Benar</h2>
+                    <p class="text-secondary">
+                        Untuk mendapatkan hasil maksimal dan pemulihan yang cepat, ikuti langkah-langkah mudah penggunaan Relaxogel berikut ini.
+                    </p>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row g-4 pt-3">
+                        <div class="col-md-6">
+                            <div class="step-card mt-md-0 mt-3">
+                                <div class="step-number">1</div>
+                                <h5 class="fw-bold mt-2">Bersihkan Area</h5>
+                                <p class="text-muted small mb-0">Pastikan area kulit yang sakit dalam keadaan bersih dan kering. Hindari mengoleskan pada luka terbuka.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="step-card mt-md-0 mt-3">
+                                <div class="step-number">2</div>
+                                <h5 class="fw-bold mt-2">Oleskan Secukupnya</h5>
+                                <p class="text-muted small mb-0">Keluarkan gel sekitar 2-4 gram (seukuran biji kacang) ke ujung jari Anda.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="step-card mt-md-3 mt-3">
+                                <div class="step-number">3</div>
+                                <h5 class="fw-bold mt-2">Pijat Lembut</h5>
+                                <p class="text-muted small mb-0">Oleskan merata pada area yang nyeri dan pijat dengan gerakan melingkar secara perlahan hingga gel menyerap sempurna.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="step-card mt-md-3 mt-3">
+                                <div class="step-number">4</div>
+                                <h5 class="fw-bold mt-2">Cuci Tangan</h5>
+                                <p class="text-muted small mb-0">Segera cuci tangan dengan sabun setelah mengaplikasikan gel, kecuali jika area yang diobati adalah tangan Anda.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimoni" class="py-5 bg-mint-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase mb-2">Testimoni</h6>
+                <h2 class="fw-bold">Apa Kata Mereka?</h2>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card p-4 h-100 shadow-sm">
+                        <div class="text-warning mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="text-secondary fst-italic mb-4">"Sering pegal di pundak karena kerja depan laptop seharian. Pakai Relaxogel langsung terasa dinginnya dan nyerinya hilang dalam hitungan menit. Plus point: baunya tidak menyengat!"</p>
+                        <div class="d-flex align-items-center">
+                            <div class="bg-primary text-white rounded-circle d-flex justify-content-center align-items-center fw-bold me-3" style="width: 50px; height: 50px;">B</div>
+                            <div>
+                                <h6 class="fw-bold mb-0">Budi Santoso</h6>
+                                <small class="text-muted">Pekerja Kantoran</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card p-4 h-100 shadow-sm">
+                        <div class="text-warning mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="text-secondary fst-italic mb-4">"Sebagai orang yang rutin lari, cedera ringan sering terjadi. Relaxogel selalu ada di tas olahraga saya. Cepat meresap dan tidak lengket sama sekali. Sangat direkomendasikan."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="bg-mint text-white rounded-circle d-flex justify-content-center align-items-center fw-bold me-3" style="width: 50px; height: 50px;">S</div>
+                            <div>
+                                <h6 class="fw-bold mb-0">Siti Rahma</h6>
+                                <small class="text-muted">Pelari Amatir</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card p-4 h-100 shadow-sm">
+                        <div class="text-warning mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                        </div>
+                        <p class="text-secondary fst-italic mb-4">"Orang tua saya sering mengeluh nyeri sendi di lutut. Saya belikan ini karena beliau punya maag jadi tidak bisa minum obat nyeri sembarangan. Alhamdulillah sangat cocok dan membantu aktivitasnya."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center fw-bold me-3" style="width: 50px; height: 50px;">A</div>
+                            <div>
+                                <h6 class="fw-bold mb-0">Andi Pratama</h6>
+                                <small class="text-muted">Wiraswasta</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="beli" class="py-5 bg-primary text-white text-center">
+        <div class="container py-4">
+            <h2 class="fw-bold mb-3">Siap Ucapkan Selamat Tinggal Pada Nyeri?</h2>
+            <p class="lead mb-4 fw-light">Dapatkan Relaxogel sekarang juga di apotek terdekat atau toko online resmi kami.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#" class="btn btn-light btn-lg rounded-pill px-4 fw-bold text-primary shadow">Beli di E-Commerce</a>
+                <a href="#" class="btn btn-outline-light btn-lg rounded-pill px-4 fw-semibold">Cari Apotek Terdekat</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 pe-lg-5">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-activity text-mint fs-3 me-2"></i>
+                        <span class="fw-bold fs-4 text-white">Relaxo<span class="text-mint">gel</span></span>
+                    </div>
+                    <p class="small mb-4">Inovasi gel pereda nyeri otot dan sendi dengan kandungan Ibuprofen 5%. Cepat meresap, tidak lengket, dan aman untuk lambung.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="fs-5"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="fs-5"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="fs-5"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h6 class="text-white fw-bold mb-3">Tautan Cepat</h6>
+                    <ul class="list-unstyled small d-flex flex-column gap-2">
+                        <li><a href="#beranda">Beranda</a></li>
+                        <li><a href="#tentang">Tentang Produk</a></li>
+                        <li><a href="#keunggulan">Keunggulan</a></li>
+                        <li><a href="#cara-pakai">Cara Pakai</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h6 class="text-white fw-bold mb-3">Bantuan</h6>
+                    <ul class="list-unstyled small d-flex flex-column gap-2">
+                        <li><a href="#">FAQ (Tanya Jawab)</a></li>
+                        <li><a href="#">Peringatan & Efek Samping</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h6 class="text-white fw-bold mb-3">Hubungi Kami</h6>
+                    <ul class="list-unstyled small d-flex flex-column gap-2">
+                        <li class="d-flex align-items-start">
+                            <i class="bi bi-geo-alt-fill text-mint me-2 mt-1"></i>
+                            <span>Gedung Farmasi Sehat Lt. 4<br>Jl. Kesehatan No. 123, Jakarta</span>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="bi bi-envelope-fill text-mint me-2"></i>
+                            <span>info@relaxogel.id</span>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="bi bi-telephone-fill text-mint me-2"></i>
+                            <span>0800-1-234-567 (Toll-Free)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-5 border-secondary">
+            <div class="text-center small mt-3 text-light">
+                &copy; 2026 PT HIKMAL FARM. Hak Cipta Dilindungi.<br>
+                <em>Tangerang - Indonesia</em>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom Script for Navbar and Smooth Scrolling -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Navbar scroll effect
+            const navbar = document.getElementById('mainNav');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                    navbar.classList.remove('py-3');
+                } else {
+                    navbar.classList.remove('scrolled');
+                    navbar.classList.add('py-3');
+                }
+            });
+
+            // Close mobile menu on click
+            const navLinks = document.querySelectorAll('.nav-link');
+            const menuToggle = document.getElementById('navbarNav');
+            const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false});
+            
+            navLinks.forEach(function(l) {
+                l.addEventListener('click', function() {
+                    if (menuToggle.classList.contains('show')) {
+                        bsCollapse.toggle();
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
